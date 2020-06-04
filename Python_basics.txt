@@ -208,27 +208,6 @@
 		https://realpython.com/python-while-loop/
 		https://realpython.com/python-for-loop/
 		https://realpython.com/python-basics/resources/#recommended-resources
-		
-    
-    
-      
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 *CONDITIONAL LOGIC
 
 	Boolean operators
@@ -291,19 +270,6 @@
 		https://realpython.com/python-operators-expressions/#logical-operators
 		https://realpython.com/python-conditional-statements/
 		https://realpython.com/python-basics/resources/#recommended-resources
-
-
-
-
-
-
-
-
-
-
-
-
-
 *EXCEPTIONS*
 	Error Types
 		ValueError  --> Trying to convert "not a number" to an int
@@ -340,27 +306,6 @@
 			#do a lot of hazardous things
 		except:
 			print("Something bad happened")
-			
-		
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 *RANDOM*
 	import random
 	random.randint(1, 10)
@@ -682,59 +627,6 @@
 		https://docs.python.org/3/tutorial/classes.html
 		https://realpython.com/search?q=oop
 		https://realpython.com/python-basics/resources/#recommended-resources
-
-
-		
-		
-		
-		
-		
-		
-		
-		
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 *MODULES*
 	Modules are different *.py files
 	A module has to be imported into another one to be used
@@ -752,13 +644,11 @@
 		Import with changed name
 		import adder as a  # from here on refer to adder as "a"
 		
-		Import only a portion of the namespace
-		from adder import add, double # one or more functions
+	Import only a portion of the namespace
 		#after this you don't need "adder." before "add"
 		# just call the function as it was an internal function of the module
-
-*FILE INPUT OUTPUT*
-	Paths
+		from adder import add, double # one or more functions		
+*PATH*
 		1. Windows: C:\Users\David\Documents\hello.txt  --> cannot enter path like this as \ is an escape character fro Python
 		2. macOS: /Users/David/Documents/hello.txt
 		3. Ubuntu Linux: /home/David/Documents/hello.txt
@@ -839,11 +729,111 @@
 		
 		path.is_file() --> True
 		path.is_dir() --> False
+
+*FILES*
+	Python has 2 file types:
+		Text
+		Binary
 		
+	Path.open() method
+		from pathlib import Path
+		path = Path.home() / "hello.txt"
+		path.touch() #creates the file
+		file = path.open(mode="r", encoding="utf-8") #returns a file object.
+		# important: .open() method keeps the file open until explicitely closed
+		#to close the file
+		file.close()
 		
+		mode:
+			"r"	Creates a text file object for reading and raises an error if the file can’t be opened.
+			"w"	Creates a text file object for writing and overwrites all existing data in the file.
+			"a"	Creates a text file object for appending data to the end of a file.
+			"rb"	Creates a binary file object for reading and raises an error if the file can’t be opened.
+			"wb"	Creates a binary file object for writing and overwrites all existing data in the file.
+			"ab"	Creates a binary file object for appending data to the end of the file
+			
+		encoding:
+			"ascii"		ASCII
+			"utf-8"		UTF-8
+			"utf-16"	UTF-16
+			"utf-32"	UTF-32
+			
+		
+	open() Built-in method
+		#difference to Path.open(): argument is string
+		file_path = "C:/Users/David/hello.txt"
+		file = open(file_path, mode="r", encoding="utf-8")
+		file.close()
 		
 	
+	Open files using WITH statement - Pythonic way
+		#return value of the open() method is assigned to the variable after "as"
+		#when code execution leaves the indented block, the file is closed automatically
+		#closing happens even if any exception raised during the execution
+		with path.open(mode="r", encoding=-"utf-8") as file:
+			# Do something with file
+			
+		with open(file_path, mode="r", encoding="utf-8") as file:
+			# Do something with file
+		
+		
+	Read data from file
+		path = Path.home() / "hello.txt"
+		with path.open(mode="r", encoding="utf-8") as file:
+			text = file.read()
+			
+		print(text) --> "Hello word!" #whole content of the file is saved in one string
+		#lines are separated by "\n"
+		
+		
+		#Read line by line
+		with path.open(mode="r", encoding="utf-8") as file:
+			for line in file.readlines():
+				print(line)
+				
+		
+	Write data to file
+		Overwrite all
+		with path.open(mode="w", encoding="utf-8") as file:
+			file.write("Hi there!")
+		#this will return the number of characters written, this case "9"
+		
+		#Important: when opening with "w" all data in file will be overwritten! 
+		#This practically deletes the original file!
+		#When opening with "w", if folder exists, but file not, it will create a new file
 	
+		
+		Append to file
+		with path.open(mode="a", encoding="utf-8") as file:
+			file.write("\nHello")
+		#this returns the characters written, this case "6"
+		#new data is printed on new line, as "\n" is at the beginning of the input string
+		
+		
+		Write multiple lines to file
+			lines_of_text = [
+				"hello line1\n",
+				"hello line2\n",
+				"hello line3\n",
+			]
+			with path.open(mode="w", encoding="utf-8") as file:
+				file.writelines(lines_of_text)
+			#Important, remember, that "w" will erase all previous data in file
+			#writenlines() does not automatically insert lines to new line, that is why "/n"-s are present
+			
+			#When opening with "w", if folder exists, but file not, it will create a new file
+			
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		
 	
 	
 	
