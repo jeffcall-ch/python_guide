@@ -822,7 +822,7 @@
 			
 			#When opening with "w", if folder exists, but file not, it will create a new file
 *PIP*
-	python3.8 -m install PackageName
+	python3.8 -m install PackageName  #on linux you need to specify the exact python version, because many versions may be present at the same time
 	
 
 
@@ -831,30 +831,3 @@
 		Enter in terminal the folder of the repo
 		rm -rf .git --> this will delete the local repo, but not the files
 		
-	
-
-		
-		
-		
-		
-		
-		
-		
-			
-		
-		
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
