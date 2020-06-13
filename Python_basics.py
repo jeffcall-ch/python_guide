@@ -831,4 +831,5 @@
 		rm -rf .git --> this will delete the local repo, but not the files
 
 Last change
+new line
 		
