@@ -208,8 +208,7 @@
 		https://realpython.com/python-while-loop/
 		https://realpython.com/python-for-loop/
 		https://realpython.com/python-basics/resources/#recommended-resources
-*CONDITIONAL LOGIC
-
+*CONDITIONAL LOGIC*
 	Boolean operators
 		>; <; >=; <=; !=; ==
 	
@@ -830,4 +829,6 @@
 	DELETE a local repository:
 		Enter in terminal the folder of the repo
 		rm -rf .git --> this will delete the local repo, but not the files
+
+Last change
 		
