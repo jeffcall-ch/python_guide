@@ -845,7 +845,11 @@
 	.GITIGNORE
 		Create a file called: .gitignore 
 		fill it with contenct from here: https://github.com/github/gitignore/blob/master/Python.gitignore
-		
+
+		If you want to add files, folder later to the .gitignore file and you need to update the repo follow this
+			http://www.codeblocq.com/2016/01/Untrack-files-already-added-to-git-repository-based-on-gitignore/
+
+			
 
 
 	SSH Key
