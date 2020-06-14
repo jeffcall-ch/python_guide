@@ -12,7 +12,11 @@
     REQUIREMENTS.TXT
     #For each virtual env set up a requirements.txt, which contains the packages installed by pip
     #when env is activated run (only needed at creating env):
-        pip freeze > requirements.txt
+        pip3 freeze > requirements.txt
+
+    #This is good, because on another machine you don't need to install every package one by one
+        $ pip3 install -r requirements.txt  #will install all requirments
+        
 
     DEACTIVATE
     # to deactivate, just run the deactivate command
@@ -24,5 +28,5 @@
 
 *FLASK Quick Start*
     python3.8 -m pip install FLASK
-    
+
 
