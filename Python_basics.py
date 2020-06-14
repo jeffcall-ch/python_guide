@@ -842,6 +842,11 @@
 		git config --global user.email jeff.call.ch@gmail.com
 		git config --global core.editor vscode # choose editor
 
+	.GITIGNORE
+		Create a file called: .gitignore 
+		fill it with contenct from here: https://github.com/github/gitignore/blob/master/Python.gitignore
+		
+
 
 	SSH Key
 		If you don't have an ssh Key, generate one to drop user and pass auth
