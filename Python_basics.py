@@ -831,10 +831,17 @@
 		rm -rf .git --> this will delete the local repo, but not the files
 
 	VSCode authentication failure
+		Try SSH key generation first
 		#Open in terminal the project folder
 		git config credential.helper store #will sore user and pass in the folder
 		#commit changes in VSCode (already committed one if push failed...)
 		git pus <repository web address>  #it will ask for username and pass which it will store
+
+	ONE TIME SETUP
+		git config --global user.name "Jeff Call"
+		git config --global user.email jeff.call.ch@gmail.com
+		git config --global core.editor vscode
+
 
 	SSH Key
 		If you don't have an ssh Key, generate one to drop user and pass auth
@@ -850,14 +857,11 @@
 		
 		ADD SSH key to github account
 		https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
-
+		Follow instructions under the link
 		$ sudo apt-get install xclip
 		# Downloads and installs xclip. If you don't have `apt-get`, you might need to use another installer (like `yum`)
 		$ xclip -sel clip < ~/.ssh/id_rsa.pub
 		# Copies the contents of the id_rsa.pub file to your clipboard
 		
 
-
-Last change
-new line
 		
