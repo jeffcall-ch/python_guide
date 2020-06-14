@@ -12,7 +12,7 @@
     REQUIREMENTS.TXT
     #For each virtual env set up a requirements.txt, which contains the packages installed by pip
     #when env is activated run (only needed at creating env):
-        pip3 freeze > requirements.txt
+        pip3 freeze > requirements.txt #can be done later as well
 
     #This is good, because on another machine you don't need to install every package one by one
         $ pip3 install -r requirements.txt  #will install all requirments
@@ -27,6 +27,10 @@
     Explained with legos: https://realpython.com/the-model-view-controller-mvc-paradigm-summarized-with-legos/
 
 *FLASK Quick Start*
-    python3.8 -m pip install FLASK
+    python3.8 -m pip install FLASK # be in env when running
+    #IMPORTANT in VSCode choose Python 3.8.x 64-bit ('env':venv) interpreter on the lef bottom corner!
+    Check out flask tutorial of VSCode: https://code.visualstudio.com/docs/python/tutorial-flask
+
+    
 
 
