@@ -821,7 +821,7 @@
 			
 			#When opening with "w", if folder exists, but file not, it will create a new file
 *PIP*
-	python3.8 -m install PackageName  #on linux you need to specify the exact python version, because many versions may be present at the same time
+	python3.8 -m pip install PackageName  #on linux you need to specify the exact python version, because many versions may be present at the same time
 	
 
 
@@ -840,7 +840,7 @@
 	ONE TIME SETUP
 		git config --global user.name "Jeff Call"
 		git config --global user.email jeff.call.ch@gmail.com
-		git config --global core.editor vscode
+		git config --global core.editor vscode # choose editor
 
 
 	SSH Key

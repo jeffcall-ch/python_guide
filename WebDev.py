@@ -19,5 +19,10 @@
 
     #Everytime you create a project, create a venv for it!
 
+*MVC*
+    Explained with legos: https://realpython.com/the-model-view-controller-mvc-paradigm-summarized-with-legos/
 
+*FLASK Quick Start*
+    python3.8 -m pip install FLASK
+    
 
