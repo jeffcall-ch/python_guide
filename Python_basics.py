@@ -68,7 +68,7 @@
         name = "Zaphod"
         heads = 2
         arms = 3
-        f"{name} has {heads} heads and {arms} arms --> 'Zaphod has 2 heads and 3 arms'
+        f"{name} has {heads} heads and {arms} arms" --> 'Zaphod has 2 heads and 3 arms'
         
         arithmetic operations work inside { }
  
@@ -852,11 +852,6 @@
 			git add . #add all files again
 			git commit -m ".gitignore fix" #make a commit
 			#after all push it in VSCode
-
-
-
-update
-
 
 
 	SSH Key

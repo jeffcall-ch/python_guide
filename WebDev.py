@@ -46,6 +46,29 @@
         set FLASK_APP=app.py
         flask run
 
+    VSCode:
+        https://code.visualstudio.com/docs/python/tutorial-flask
+        Click on debug and create a launch.json file for running FLASK_APP
+        in the launch.json you may need to add the relative path to app.py if it is saved in subfolder
+        "FLASK_APP": "flask_quick_start/app.py",
+
+    @app.route decorator
+        @app.route("/test/<search_query>")
+        def search(search_query):
+            return search_query
     
+    Flask converters
+        <value> --> unicode string
+        <int:value> --> int
+        <float:value>  --> float
+        <path:some/cool/path>  --> path
+
+    Response object
+        The response is a tuple: (response, status, headers)
+        By default the status is 200 and the headers is "document" when a string is returned
+
+        
+
+
 
 
