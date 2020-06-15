@@ -848,6 +848,12 @@
 
 		If you want to add files, folder later to the .gitignore file and you need to update the repo follow this
 			http://www.codeblocq.com/2016/01/Untrack-files-already-added-to-git-repository-based-on-gitignore/
+			git rm -r --cached .  # . at the end is needed too. Command to clear cache. No files will be deleted
+			git add . #add all files again
+			git commit -m ".gitignore fix" #make a commit
+			#after all push it in VSCode
+
+
 
 			
 
