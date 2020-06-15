@@ -31,6 +31,17 @@
     #IMPORTANT in VSCode choose Python 3.8.x 64-bit ('env':venv) interpreter on the lef bottom corner!
     Check out flask tutorial of VSCode: https://code.visualstudio.com/docs/python/tutorial-flask
 
+    Start app:
+    Make sure you are in the folder where your app is located at.
+    Linux:
+        $ export FLASK_APP=hello.py
+        $ flask run
+        * Running on http://127.0.0.1:5000/
+
+    Windows:
+        set FLASK_APP=app.py
+        flask run
+
     
 
 
