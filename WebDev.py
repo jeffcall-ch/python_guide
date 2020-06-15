@@ -1,10 +1,14 @@
 *VENV*
     Virtual env is needed to create a separate python setup with modules for each project
-    python3.8 -m venv env #creates a new dir
-    #on Ubuntu you may need to install first if python-venv is not available
-        sudo apt-get install python3.8-venv
+    Linux:
+        python3.8 -m venv env #creates a new dir
+        #on Ubuntu you may need to install first if python-venv is not available
+            sudo apt-get install python3.8-venv
+    Windows:
+        python -m venv C:\Users\50000700\Python\Python_repos\python_web_dev\env
     
     ACTIVATE
+    In VSCode by selecting the interpreter Python 3.8.x 64-bit ('env':venv) will automatically activate the env. 
     source env/bin/activate #will activate the virtual env
     #This will activate the virtual env and the cursor changes
     (env) ls@LS-LINUX:~/Python/python_web_dev$ --> (env) shows you are in the venv
