@@ -9,9 +9,13 @@
     
     ACTIVATE
     In VSCode by selecting the interpreter Python 3.8.x 64-bit ('env':venv) will automatically activate the env. 
-    source env/bin/activate #will activate the virtual env
-    #This will activate the virtual env and the cursor changes
-    (env) ls@LS-LINUX:~/Python/python_web_dev$ --> (env) shows you are in the venv
+    Linux:
+        source env/bin/activate #will activate the virtual env
+        #This will activate the virtual env and the cursor changes
+        (env) ls@LS-LINUX:~/Python/python_web_dev$ --> (env) shows you are in the venv
+    Windows:
+        PowerShell PS C:\> <env>\Scripts\Activate.ps1
+        #In CMD it is cmd.exe C:\> <venv>\Scripts\activate.bat
     
     REQUIREMENTS.TXT
     #For each virtual env set up a requirements.txt, which contains the packages installed by pip
@@ -19,7 +23,11 @@
         pip3 freeze > requirements.txt #can be done later as well
 
     #This is good, because on another machine you don't need to install every package one by one
+    First activate <env> !
+        Linux:
         $ pip3 install -r requirements.txt  #will install all requirments
+        Windows: BEHIND PROXY:
+            pip --proxy https://148.64.11.164:8080 install -r requirements.txt
         
 
     DEACTIVATE
