@@ -1,3 +1,4 @@
+# flake8: noqa
 #Python help resource by LS
 
 *STRINGS*
@@ -821,7 +822,10 @@
 			
 			#When opening with "w", if folder exists, but file not, it will create a new file
 *PIP*
-	python3.8 -m pip install PackageName  #on linux you need to specify the exact python version, because many versions may be present at the same time
+	Linux:
+		python3.8 -m pip install PackageName  #on linux you need to specify the exact python version, because many versions may be present at the same time
+	Windows: (exmaple proxy)
+		pip install --proxy https://148.64.11.164:8080 packagename
 	
 
 
@@ -875,4 +879,15 @@
 		# Copies the contents of the id_rsa.pub file to your clipboard
 		
 
-		
+*VSCode*
+	Linter: flake8
+		Activate <env> first!
+		CTRL+Shift+P : 	Python: Select linter --> install and activate item
+		Install under Windows: 
+			pip install --proxy https://148.64.11.164:8080 -U flake8 
+
+		Exlude a file
+			https://flake8.pycqa.org/en/3.1.1/user/ignoring-errors.html
+			add the following line at the beginning of the file
+			# flake8: noqa
+	

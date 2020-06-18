@@ -1,3 +1,5 @@
+# flake8: noqa
+
 *VENV*
     Virtual env is needed to create a separate python setup with modules for each project
     Linux:
@@ -64,6 +66,20 @@
         @app.route("/test/<search_query>")
         def search(search_query):
             return search_query
+
+    @app.route("/integer/<int:value>")
+    def int_type(value):
+        print (value + 1)
+        return "correct"
+
+    @app.route("/name/<name>")
+    def index(name):
+        if name.lower() == "michael":
+            # return "Hello, {}".format(name), 200
+            return f"Hello, {name}", 200
+        else:
+            return "Not found", 404
+
     
     Flask converters
         <value> --> unicode string
@@ -75,7 +91,9 @@
         The response is a tuple: (response, status, headers)
         By default the status is 200 and the headers is "document" when a string is returned
 
-        
+    Enable debug in browser add this line to the code
+        # error handling
+        app.config["DEBUG"] = True   
 
 
 
