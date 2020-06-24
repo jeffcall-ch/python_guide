@@ -1,5 +1,6 @@
 # flake8: noqa
 
+
 *VENV*
     Virtual env is needed to create a separate python setup with modules for each project
     Linux:
@@ -8,6 +9,8 @@
             sudo apt-get install python3.8-venv
     Windows:
         python -m venv C:\Users\50000700\Python\Python_repos\python_web_dev\env
+        or with relative path standing in the python_web_dev folder:
+            python -m venv ./env
     
     ACTIVATE
     In VSCode by selecting the interpreter Python 3.8.x 64-bit ('env':venv) will automatically activate the env. 

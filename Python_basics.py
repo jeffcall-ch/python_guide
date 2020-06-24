@@ -891,3 +891,8 @@
 			add the following line at the beginning of the file
 			# flake8: noqa
 	
+*START a new github repo*
+	in your repo collection folder
+		git clone http_repo
+		cd repo
+		
