@@ -95,6 +95,19 @@
         # error handling
         app.config["DEBUG"] = True   
 
+        Open VSCode launch.json which is holding the debugging info and make sure, that your settings are:
+            "env": {
+                "FLASK_APP": "flask_quick_start/app.py",
+                "FLASK_ENV": "development",
+                "FLASK_DEBUG": "1"   # set it to "1" by default is "0"
+            },
+
+            "args": [
+                "run",
+                "--no-debugger",  #delete this line
+                "--no-reload"   #delete this line
+            ],
+
 
 
 
