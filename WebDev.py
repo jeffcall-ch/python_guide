@@ -1,6 +1,4 @@
 # flake8: noqa
-
-
 *VENV*
     Virtual env is needed to create a separate python setup with modules for each project
     Linux:
