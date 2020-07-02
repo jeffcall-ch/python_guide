@@ -885,14 +885,14 @@
 		CTRL+Shift+P : 	Python: Select linter --> install and activate item
 		Install under Windows: 
 			pip install --proxy https://148.64.11.164:8080 -U flake8 
+		Linux:
+			python3.8 -m pip install -U flake8
 
 		Exlude a file
 			https://flake8.pycqa.org/en/3.1.1/user/ignoring-errors.html
 			add the following line at the beginning of the file
 			# flake8: noqa
-	
-*START a new github repo*
-	in your repo collection folder
-		git clone http_repo
-		cd repo
-		
+
+	Refactoring
+		If F2 doesn not work and stop with source code error, then open settings.json and add line:
+			"python.jediEnabled": false  # this will enable python language server instead of rope
