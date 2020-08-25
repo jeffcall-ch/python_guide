@@ -896,3 +896,64 @@
 	Refactoring
 		If F2 doesn not work and stop with source code error, then open settings.json and add line:
 			"python.jediEnabled": false  # this will enable python language server instead of rope
+
+
+*Pyinstaller*
+	Pyinstaller is a package to create one distributable *.exe file from the python project
+	Installing pyinstaller thorough pip can be problematic, as it fails to download
+
+	Offline installing is the easiest, but it can install only an old version of pyinstaller
+
+	INSTALLATION
+
+	1. Create a package folder and download pyinstaller wheel file from here:
+	https://www.lfd.uci.edu/~gohlke/pythonlibs/
+		file name: PyInstaller‑3.6‑py2.py3‑none‑any.whl
+
+	2. Go to the github page of pyinstaller and download requirements.txt to the same folder
+
+	3. Download all packeges from requirements.txt
+		pip download --proxy https://148.64.11.164:8080 -r requirements.txt -d C:\Users\50000700\Python\pyinstaller_packages
+
+	4. IMPORTANT: Modify the requirements txt and add "pyinstaller" to the first line. This is needed to install that package too when selecting the file to install everything in it
+
+	5. Activate env for your project!
+
+	6. Install offline packages inside your env:
+		pip install --no-index --find-links C:\Users\50000700\Python\pyinstaller_packages  -r C:\Users\50000700\Python\pyinstaller_packages\requirements.txt
+
+	USAGE:
+
+	1. Create cli.py to define the entry point for the creation script where it enters your program
+		Example:
+		# this file defines the entry point for pyinstaller for creating an *.exe package from the python project
+		# to run pyinstaller: activate env, then run: pyinstaller cli.py --name bom_compare --onefile
+		# don't forget to define main in your main module
+		from my_starter_module import main
+		if __name__ == '__main__':
+			main()
+
+	8. Create setup.py to define how to build your *.exe
+		Example:
+		# this file defines the setup for pyinstaller for creating an *.exe package from the python project
+		# to run pyinstaller: activate env, then run: pyinstaller cli.py --name bom_compare --onefile
+		# modify content as needed, pay special attention to enty_points
+		setup(
+			name="excel-bom-compare",
+			version="1.0.0",
+			description="Script to compare piping isometric excel BOMs from SP3D",
+			long_description=README,
+			long_description_content_type="text/markdown",
+			url="https://github.com/jeffcall-ch/excel_bom_compare",
+			author="Laszlo Sziva",
+			author_email="szivalaszlo@gmail.com",
+			license="MIT",
+			classifiers=[
+				"License :: OSI Approved :: MIT License",
+				"Programming Language :: Python :: 3",
+			],
+			entry_points={"console_scripts": ["realpython=my_starter_module:main"]},
+		)
+
+	9. Run pyinstaller with env activated. This created one file with custom name:
+		pyinstaller cli.py --name bom_compare --onefile
