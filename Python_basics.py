@@ -904,6 +904,8 @@
 
 	Offline installing is the easiest, but it can install only an old version of pyinstaller
 
+	For usage read: https://realpython.com/pyinstaller-python/
+
 	INSTALLATION
 
 	1. Create a package folder and download pyinstaller wheel file from here:
